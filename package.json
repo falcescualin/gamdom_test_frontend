@@ -1,8 +1,8 @@
 {
-  "name": "@minimal-kit/vite-ts",
-  "author": "Minimals",
+  "name": "gamdom_test",
+  "author": "Falcescu Alin",
   "version": "5.7.0",
-  "description": "Vite & TypeScript",
+  "description": "Gamdom Test Project",
   "private": true,
   "type": "module",
   "scripts": {

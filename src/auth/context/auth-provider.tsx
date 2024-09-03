@@ -153,7 +153,7 @@ export function AuthProvider({ children }: Props) {
 
       router.push(paths.dashboard.root);
     },
-    [router]
+    [router],
   );
 
   // REGISTER
@@ -162,7 +162,7 @@ export function AuthProvider({ children }: Props) {
       email: string,
       password: string,
       firstName: string,
-      lastName: string
+      lastName: string,
     ) => {
       const data = {
         email,
@@ -189,8 +189,10 @@ export function AuthProvider({ children }: Props) {
           },
         },
       });
+
+      router.push(paths.dashboard.root);
     },
-    []
+    [router],
   );
 
   // LOGOUT
@@ -255,7 +257,7 @@ export function AuthProvider({ children }: Props) {
       refreshAccessToken,
       me,
     }),
-    [state.user, status, login, register, logout, refreshAccessToken, me]
+    [state.user, status, login, register, logout, refreshAccessToken, me],
   );
 
   return (
