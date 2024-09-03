@@ -1,6 +1,7 @@
 import { Navigate, useRoutes } from "react-router-dom";
 
 import NotFoundPage from "src/pages/404/404";
+import UnauthorizedPage from "src/pages/401/401";
 import Homepage from "src/pages/homepage/homepage";
 
 import { authRoutes } from "./auth";
@@ -19,6 +20,10 @@ export default function Router() {
     // Dashboard routes
     ...dashboardRoutes,
 
+    {
+      path: "/401",
+      element: <UnauthorizedPage />,
+    },
     {
       path: "/404",
       element: <NotFoundPage />,

@@ -107,7 +107,7 @@ const DashboardView = () => {
           <h2 className="text-2xl font-semibold text-gray-800 mb-4">
             Featured Matches
           </h2>
-          {eventsData.rows && (
+          {eventsData.rows && eventsData.rows.length > 0 && (
             <EventsTable
               eventsData={eventsData.rows}
               selectOdd={handleSelectOdd}
@@ -117,7 +117,7 @@ const DashboardView = () => {
         </section>
 
         <div className="mt-8 ">
-          {eventsData.rows && (
+          {eventsData.rows && eventsData.rows.length > 0 && (
             <BetSlip
               eventsData={eventsData.rows}
               selectedEvents={selectedEvents}
