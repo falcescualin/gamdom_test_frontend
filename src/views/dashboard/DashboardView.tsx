@@ -107,9 +107,9 @@ const DashboardView = () => {
           <h2 className="text-2xl font-semibold text-gray-800 mb-4">
             Featured Matches
           </h2>
-          {eventsData && (
+          {eventsData.rows && (
             <EventsTable
-              eventsData={eventsData}
+              eventsData={eventsData.rows}
               selectOdd={handleSelectOdd}
               selectedEvents={selectedEvents}
             />
@@ -117,8 +117,11 @@ const DashboardView = () => {
         </section>
 
         <div className="mt-8 ">
-          {eventsData && (
-            <BetSlip eventsData={eventsData} selectedEvents={selectedEvents} />
+          {eventsData.rows && (
+            <BetSlip
+              eventsData={eventsData.rows}
+              selectedEvents={selectedEvents}
+            />
           )}
         </div>
       </main>
